@@ -1,13 +1,114 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  background-color: #b2e1f8;
+}
+
+nav{
+  padding: 2rem ;
+  background-color: #f2f7fd;
+}
+
+h1{
+  color: yellowgreen;
+  font-size: 2.4rem;
+}
+
+button{
+  border: none;
+  outline: none;
+  background-color: #f2f7fd;
+  font-size: 2rem;
+  color: yellowgreen;
+
+}
+
+button:hover{
+  cursor: pointer;
+  color: orangered;
+}
+
+
+ul{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+  text-transform: capitalize;
+}
+
+li{
+  margin: 0 1rem;
+}
+
+.logo-toggle{
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-items{
+  height: 0;
+  overflow: hidden;
+  transition: height 1s;
+}
+
+.links a{
+  display: block;
+  padding: .5rem 0;
+}
+
+.links li a:hover{
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+
+.icons{
+  display: none;
+  font-size: 1.5rem;
+  
+}
+
+@media(min-width:850px){
+  nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  button{
+    display: none;
+  }
+
+  .icons{
+    display: block;
+  }
+
+  .icons li{
+    display: inline-block;
+  }
+
+
+  .icons li a {
+    color: yellowgreen;
+  }
+
+  .icons li a:hover{
+    color: orangered;
+    transition: color 1s;
+  } 
+
+  .nav-items{
+    height: auto !important;
+  }
+
+  .links li{
+    display: inline-block;
+  }
 }
